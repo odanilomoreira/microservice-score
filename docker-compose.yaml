@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+    score:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        command: 'python app.py'
+        ports:
+            - 8000:8000
+        volumes:
+        - .:/app
+        
+        
